@@ -19,6 +19,15 @@
     {
       "src": "/(.*)",
       "dest": "/client/dist/$1"
+    },
+    {
+      "src": "/assets/(.*)",
+      "dest": "/client/dist/assets/$1"
     }
-  ]
+  ],
+  "build": {
+    "env": {
+      "NODE_ENV": "production"
+    }
+  }
 }
