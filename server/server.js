@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import "dotenv/config";
+import connectDB from "./configs/db.js";
 
 // Create Express app
 const createApp = () => {
@@ -31,6 +32,7 @@ const createApp = () => {
 
 // For local development
 const PORT = process.env.PORT || 3001;
+await connectDB();
 const app = createApp();
 
 app.listen(PORT, () => {
