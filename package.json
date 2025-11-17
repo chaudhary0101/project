@@ -1,19 +1,18 @@
 {
-  "name": "client",
-  "version": "0.0.0",
+  "name": "resume-builder",
+  "version": "1.0.0",
+  "description": "Resume Builder Application",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "npm run build --workspaces",
+    "build:client": "cd client && npm run build",
+    "build:server": "echo 'Server build not required for Vercel'",
+    "dev": "concurrently \"npm run dev --workspace=client\" \"npm run server --workspace=server\""
   },
-  "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "tailwindcss": "^4.1.14"
-  },
-  "devDependencies": {
-    "@tailwindcss/vite": "^4.1.17",
-    "@vitejs/plugin-react": "^4.3.1",
-    "vite": "^5.2.0"
-  }
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

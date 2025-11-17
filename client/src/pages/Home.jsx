@@ -1,24 +1,22 @@
-import React from 'react'
-import Banner from '../components/home/Banner'
-import Hero from '../components/home/Hero'
-import Features from '../components/home/Features'
-import Testimonial from '../components/home/Testimonial'
-import CallToAction from '../components/home/CallToAction'
-import Footer from '../components/home/Footer'
-
+import React from "react";
+import Hero from "../components/home/Hero";
+import Features from "../components/home/Features";
+import Testimonial from "../components/home/Testimonial";
+import CallToAction from "../components/home/CallToAction";
+import Footer from "../components/home/Footer";
+import TestComponent from "../components/TestComponent";
 
 const Home = () => {
   return (
     <div>
-      <Banner />
       <Hero />
+      <TestComponent />
       <Features />
-      <Testimonial/>
-      <CallToAction/>
-      <Footer/>
-
+      <Testimonial />
+      <CallToAction />
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
